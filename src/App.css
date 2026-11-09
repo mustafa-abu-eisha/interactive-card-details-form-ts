@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+
+  --color-gray-200: hsl(270, 3%, 87%);
+  --color-gray-400: hsl(212, 12%, 71%);
+  --color-purple-950: hsl(278, 68%, 11%);
+  --color-red-400: hsl(0, 100%, 66%);
+  --desktop-bg: url("./assets/bg-main-desktop.png");
+  --mobile-bg: url("./assets/bg-main-mobile.png");
+}
+
+@layer components {
+  .card {
+    @apply w-95 max-w-full;
+  }
+  .form-label {
+    @apply block uppercase font-medium text-sm text-purple-950 tracking-widest mb-2;
+  }
+  .form-input {
+    @apply w-full h-11.5 px-4 border border-gray-200 rounded-lg text-lg text-purple-950 caret-purple-950 placeholder:text-purple-950/25 transition duration-200 focus-visible:border focus-visible:border-transparent focus-visible:bg-[linear-gradient(#fff,#fff),linear-gradient(to_right,hsl(249,99%,64%),hsl(278,94%,30%))] focus-visible:bg-origin-border focus-visible:[background-clip:padding-box,border-box] focus-visible:outline-0;
+  }
+
+  .input-error {
+    @apply mb-5 border-red-400 focus-visible:border focus-visible:border-transparent focus-visible:bg-[linear-gradient(#fff,#fff),linear-gradient(to_right,hsl(249,99%,64%),hsl(278,94%,30%))] focus-visible:bg-origin-border focus-visible:[background-clip:padding-box,border-box];
+  }
+  .error {
+    @apply absolute left-0 -bottom-1 text-xs text-red-400;
+  }
+
+  .btn {
+    @apply w-full h-13.5 flex justify-center items-center text-lg border-2 border-transparent bg-purple-950 text-white rounded-lg cursor-pointer transition duration-200 hover:bg-[linear-gradient(#fff,#fff),linear-gradient(to_right,hsl(249,99%,64%),hsl(278,94%,30%))] hover:bg-origin-border hover:[background-clip:padding-box,border-box] hover:text-purple-950 focus-visible:bg-[linear-gradient(#fff,#fff),linear-gradient(to_right,hsl(249,99%,64%),hsl(278,94%,30%))] focus-visible:bg-origin-border focus-visible:[background-clip:padding-box,border-box] focus-visible:text-purple-950 focus-visible:outline-0;
+  }
+}
