@@ -112,7 +112,7 @@ export default function SubmitForm({
               type="text"
               id="date-month"
               placeholder="MM"
-              className={`form-input ${inputsErrors.month ? "input-error" : ""} mb-3`}
+              className={`form-input ${inputsErrors.month ? "input-error mb-3" : ""}`}
               autoComplete="off"
               value={cardDetails.month}
               onChange={(e) => handleChange(e, "month")}
@@ -121,7 +121,7 @@ export default function SubmitForm({
               type="text"
               id="date-year"
               placeholder="YY"
-              className={`form-input ${inputsErrors.year ? "input-error" : ""} mb-3`}
+              className={`form-input ${inputsErrors.year ? "input-error mb-3" : ""}`}
               autoComplete="off"
               value={cardDetails.year}
               onChange={(e) => handleChange(e, "year")}
@@ -141,7 +141,7 @@ export default function SubmitForm({
             type="text"
             id="cvc-number"
             placeholder="e.g. 123"
-            className={`form-input ${inputsErrors.cvc ? "input-error" : ""} mb-3`}
+            className={`form-input ${inputsErrors.cvc ? "input-error mb-3" : ""}`}
             autoComplete="off"
             value={cardDetails.cvc}
             onChange={(e) => handleChange(e, "cvc")}
